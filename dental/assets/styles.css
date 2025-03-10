@@ -1,0 +1,286 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0099cc;
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+.nav-btn {
+    display: block;
+    padding: 12px 25px;
+    background-color: #0099cc;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.nav-btn:hover {
+    background-color: #007bb5;
+    transform: scale(1.1);
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+.nav-btn::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background-image: url('../images/歯.png');
+    background-size: cover;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+    color: #0099cc;
+}
+
+h3 {
+    color: #007bb5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #0099cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #007bb5;
+}
+
+footer {
+    text-align: center;
+    background-color: #0099cc;
+    color: white;
+    padding: 10px 0;
+}
+
+/* ハイライト用のスタイル */
+.highlight {
+    background-color: rgb(240, 240, 177);
+    padding: 0 5px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* 親知らず外来の画像 */
+.image-container img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 歯科医師紹介カード */
+.doctor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.doctor-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-info h3 {
+    color: #0099cc;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.doctor-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* スマホ対応（レスポンシブ） */
+@media screen and (min-width: 768px) {
+    .doctor-card {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .doctor-card img {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .doctor-info {
+        flex: 1;
+    }
+
+    .doctor-info p {
+        text-align: left;
+    }
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.description p {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.price-table th,
+.price-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.price-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.note {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 1rem;
+}
+
+#contact {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    background-color: #fff;
+    padding: 20px;
+    border-left: 5px solid #00a6a6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* レスポンシブ対応 */
+@media screen and (min-width: 768px) {
+    .contact-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-info,
+    .map-container {
+        width: 48%;
+    }
+}
