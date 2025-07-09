@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
@@ -128,159 +130,148 @@ footer {
     margin: 0 auto;
 }
 
-/* 歯科医師紹介カード */
-.doctor-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+#reservation {
     padding: 20px;
-    margin-bottom: 30px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.doctor-card img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 12px;
-    margin-bottom: 15px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.doctor-info h3 {
-    color: #0099cc;
-    font-size: 22px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.doctor-info p {
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: center;
-    padding: 0 10px;
-}
-
-/* スマホ対応（レスポンシブ） */
-@media screen and (min-width: 768px) {
-    .doctor-card {
-        flex-direction: row;
-        text-align: left;
-    }
-
-    .doctor-card img {
-        margin-right: 20px;
-        margin-bottom: 0;
-    }
-
-    .doctor-info {
-        flex: 1;
-    }
-
-    .doctor-info p {
-        text-align: left;
-    }
-}
-
-.image-container {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-}
-
-.description p {
-    font-size: 16px;
-    line-height: 1.6;
-    padding: 0 20px;
-}
-
-.price-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    background-color: #fff;
-}
-
-.price-table th,
-.price-table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-}
-
-.price-table th {
-    background-color: #f5f5f5;
-    font-weight: bold;
-}
-
-.note {
-    font-size: 0.95rem;
-    color: #555;
-    margin-top: 1rem;
-}
-
-#contact {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-}
-
-#contact h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.contact-wrapper {
+form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
 }
 
-.contact-info {
-    background-color: #fff;
-    padding: 20px;
-    border-left: 5px solid #00a6a6;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
+form label {
+    margin-bottom: 8px;
 }
 
-.contact-info p {
-    margin-bottom: 15px;
+form input,
+form textarea {
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.map-container iframe {
-    width: 100%;
-    height: 300px;
+form button {
+    padding: 10px;
+    background-color: #0099cc;
+    color: white;
     border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-/* レスポンシブ対応 */
-@media screen and (min-width: 768px) {
-    .contact-wrapper {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+form button:hover {
+    background-color: #007bb5;
+}
 
-    .contact-info,
-    .map-container {
-        width: 48%;
-    }
+/* 予約ボタン専用スタイル */
+.reservation-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff6b6b;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.reservation-btn:hover {
+    background-color: #e05252;
+    transform: scale(1.05);
+}
+
+.reservation-btn:active {
+    transform: scale(0.95);
+}
+
+.doctor-card img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Accordion styles */
+.accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.accordion-header {
+    background: linear-gradient(135deg, #0099cc 0%, #33B5E5 99%); /* Main blue to a slightly lighter blue */
+    color: white; /* White text for contrast */
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    font-size: 22px; /* Slightly larger font */
+    /* font-weight: bold; */ /* Removed bold */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 5px; /* Space between buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: 'Kosugi Maru', sans-serif; /* Apply cute font */
+}
+
+.accordion-header:hover {
+    background: linear-gradient(135deg, #33B5E5 0%, #0099cc 99%); /* Reverse gradient on hover */
+    transform: scale(1.02); /* Slight scale up on hover */
+}
+
+.accordion-content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+}
+
+/* Apply cute font to the main services heading */
+#services h2 {
+    font-family: 'Kosugi Maru', sans-serif; /* Apply cute font */
+    text-align: center;
+    font-size: 3em; /* Larger font size */
+    color: #007bb5; /* Darker blue for consistency */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Subtle text shadow */
+    /* font-weight: bold; */ /* Removed bold */
+}
+
+/* Content Box styles */
+.content-box {
+    border: 2px solid #ADD8E6; /* Light blue border */
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f8faff; /* Very light blue background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* Space from the header */
+
+    /* Initial state for animation */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Animation state when accordion is open */
+.accordion-content.active .content-box {
+    opacity: 1;
+    transform: translateY(0);
 }
